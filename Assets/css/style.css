@@ -10,10 +10,12 @@ body {
 }
 
 h1 {
-  text-align: center;
+  font-size: 3em;
   font-weight: bold;
   color: #333;
+  text-shadow: 2px 2px #fff;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .Choices {
