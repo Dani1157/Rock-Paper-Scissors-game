@@ -1,4 +1,3 @@
-
 const choices = ["rock", "paper", "scissor"];
 const playersDislay = document.getElementById("playersDisplay");
 const botDisplay = document.getElementById("botDisplay");
