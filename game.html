@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Rock, Paper, Scissors Game</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
         <button onclick="mygame('paper')">Paper 🗞️</button>
         <button onclick="mygame('scissor')">Scissors ✂️</button>
     </div>
-    <div id="playersDisplay">Player</div>
+<div id="playersDisplay">Player</div>
     <div id="botDisplay">Bot</div>
     <div id="resultDisplay">Result</div>
 
@@ -25,10 +26,29 @@
    <div class="scoreDisplay">
   
    <span id="botScoreDisplay">Bot Score: 0</span>
-
-
-    </div>
-
+  </div>
+ <div class="options">
+        <a href="index.html" title="Click me">Quit</a>
+    <button id="reset-btn" onclick="window.location.reload()" >Restart</button>
+</div>
     <script src="game.js"></script>
+<footer>
+        <!-- Social Links Section -->
+        <div class="social">
+            <!-- Instagram link with icon and title attribute set to "instagram" -->
+            <a href="https://www.instagram.com/naenae_nene_6545?igsh=NHF6MHZwajlqZWYw" title="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Twitter link with icon and title attribute set to "x" -->
+            <a href="https://x.com/daniel34241510?s=09" title="x" target="_blank"><i class="fab fa-twitter"></i></a>
+            <!-- YouTube link with icon and title attribute set to "youtube" -->
+            <a href="https://youtube.com/@user-ss6sw3lx8y?si=Ql9l90zxOFIzH_mw" title="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <!-- GitHub link with icon and title attribute set to "github" -->
+            <a href="https://github.com/Dani1157" title="github" target="_blank"><i class="fab fa-github-alt"></i></a>
+        </div>
+        <!-- Footer Bottom Section -->
+        <div class="footerbottom">
+            <!-- Designed by Dani Text Content with Designer's Name as a Span element inside the text content -->
+            <p>Designed by<span class="designer">Dani</span></p>
+        </div>
+    </footer> 
 </body>
 </html>

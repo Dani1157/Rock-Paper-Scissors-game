@@ -1,75 +1,165 @@
 body {
-    background-color: #0fa8f4;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff; /* text color */
-    border: #333 2px solid;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  .Choices {
-    margin-bottom: 30px;
-  }
-  
-  .Choices button {
-    font-size: 1.5rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px; /* rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .Choices button:hover {
-    background-color: #555;
-  }
-  
-  #playersDisplay, #botDisplay {
-    margin-top: 20px;
-    font-size: 1.2rem;
-  }
-  
-  #resultDisplay{
+  background-color:lightblue;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff; /* text color */
+  color: green;
+
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.Choices {
+  margin-bottom: 30px;
+}
+
+.Choices button {
+  font-size: 1.5rem;
+  background-color: #ff1313;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Choices button:hover {
+  background-color: #555;
+}
+
+#playersDisplay, #botDisplay {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+#resultDisplay {
   font-size: large;
   margin-top: 20px;
-  
-  
-  
-  }
-  
-  .scoreDisplay{
-    font-size: 2rem;
-    margin-top: 20px;
-  }
+}
 
-  a{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: 2px solid #333;
-    border-radius: 250px;
-    
-    }
+.scoreDisplay {
+  font-size: 2rem;
+  margin-top: 20px;
+}
 
-    a:hover {
-        background-color: #333;
-        color: #fff;
-    }
-    
-    
-    
-    
-    .options{
-    text-align:center ;
-    margin-bottom: 200px;
-    }
+a {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid #fa0505;
+  border-radius: 250px;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px; 
+  margin-top: 50px; 
+  color: red;
+}
+
+a:hover {
+  background-color: #333;
+
+}
+
+.links {
+    text-align:center ; 
+}
+
+.two{
+  font-weight: bold;
+  font-size:large;
+  color: green;
+  text-align: center;
+}
+
+.greenText{
+  color: rgb(8, 233, 8) !important;
+}
+
+.redText{
+  color: red !important;
+}
+
+.blackText {
+  color: black !important;
+}
+
+
+#reset-btn{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid #fa0505;
+  border-radius: 250px;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px; 
+  margin-top: 50px; 
+  color: red;
+  background-color:lightblue;
+}
+
+#reset-btn:hover {
+  background-color: #333;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+.social a {
+   text-decoration: none;
+   padding: 10px;
+   background-color: aliceblue;
+   margin: 10px;
+   border-radius: 50%;
+}
+
+.social a i{
+  font-size: 2em;
+  color: #000;
+  opacity: 0.9;
+}
+
+/* Hover effects on social media icons */
+.socialicons a:hover{
+  background-color:#B3C8CF;
+  transition: 0.100s;
+}
+
+.social a:hover i{
+  color:#B3C8CF;
+  transition: 0.5s;
+}
+
+.footernav{
+  margin: 30px 0;
+}
+
+.footernav ul{
+  display: flex;
+  justify-content: center;
+}
+
+.footerbottom{
+  padding: 20px;
+  text-align: center;
+}
+
+.footerbottom p{
+  color: black;
+}

@@ -31,22 +31,23 @@ function mygame(playerschoice) {
     playersDislay.textContent = `The Player chose: ${playerschoice}`;
     botDisplay.textContent = `The Bot chose: ${botChoice}`;
     resultDisplay.textContent = result;
-
-    switch (result) {
-        case "YOU WIN":
-            document.body.style.backgroundColor = "green";
-            playerScore++;
-            playerScoreDisplay.textContent = `Player Score: ${playerScore}`;
-            break;
-        case "YOU LOSE":
-            document.body.style.backgroundColor = "red";
-            botScore++;
-            botScoreDisplay.textContent = `Bot Score: ${botScore}`;
-            break;
-        case "IT'S A TIE":
-            document.body.style.backgroundColor = "black";
-            break;
-    
-    }
+  switch (result) {
+    case "YOU WIN":
+        resultDisplay.textContent = "YOU WIN";
+        resultDisplay.style.color = "green";
+        playerScore++;
+        playerScoreDisplay.textContent = `Player Score: ${playerScore}`;
+        break;
+    case "YOU LOSE":
+        resultDisplay.textContent = "YOU LOSE";
+        resultDisplay.style.color = "red";
+        botScore++;
+        botScoreDisplay.textContent = `Bot Score: ${botScore}`;
+        break;
+    case "IT'S A TIE":
+        resultDisplay.textContent = "IT'S A TIE";
+        resultDisplay.style.color = "black";
+        break;
+}
 }
 
