@@ -163,3 +163,8 @@ a:hover {
 .footerbottom p{
   color: black;
 }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
