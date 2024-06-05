@@ -14,6 +14,9 @@ Rock, Paper, Scissors is a classic game of strategy and chance. a bot and a play
 
       - restart section: here the user can chose to restart the game from scratch instead of keep refreshing the page. This function wipes all the previous results and brings the game back to zero.
 
+![Mockup](assets/images/homemockup.png) 
+
+![Mockup2](assets/images/gamemockup.png) 
 
 # Table of Contents
 1. [UX](#user-experience-ux)
@@ -79,11 +82,12 @@ The website consists of two pages. easy to navigate and smooth transition to go 
   #### Home page
 
 
-   #### Desktop
+   #### Desktop 
+ ![wireforme](assets/images/)
   #### Game page
- ![wireforme]
+ ![wireforme](assets/images/)
 ## Colour Scheme
- ![wireforme]
+ ![wireforme](assets/images/)
 
 # Deployment
 1. Select the project, and go to the Settings tab of your GitHub repository.
