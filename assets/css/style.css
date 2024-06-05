@@ -3,10 +3,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #fff; /* text color */
   color: green;
-
 }
 
 h1 {
@@ -29,7 +26,7 @@ h1 {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px; /* rounded corners */
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -95,7 +92,6 @@ a:hover {
 .blackText {
   color: black !important;
 }
-
 
 #reset-btn{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
