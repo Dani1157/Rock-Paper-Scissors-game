@@ -83,11 +83,10 @@ The website consists of two pages. easy to navigate and smooth transition to go 
 
 
    #### Desktop 
- ![wireforme](assets/images/)
+ ![wireforme](assets/images/rules0.webp)
+ ![wireforme](assets/images/rules.webp)
   #### Game page
- ![wireforme](assets/images/)
-## Colour Scheme
- ![wireforme](assets/images/)
+ ![wireforme](assets/images/frame.webp)
 
 # Deployment
 1. Select the project, and go to the Settings tab of your GitHub repository.
