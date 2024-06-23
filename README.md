@@ -92,15 +92,40 @@ The website consists of two pages. easy to navigate and smooth transition to go 
  ![wireforme](assets/images/frame.webp)
 
 # Deployment
-1. Select the project, and go to the Settings tab of your GitHub repository.
-2. On the left-hand > under the Code and Automation section, select Pages.
-3. under build and deployment >set 
-Source to 'Deploy from Branch'.
-The main branch is selected.
-The folder is set to / (root).
-4. Under Branch, click Save.
-5. Go back to the Code tab. Wait a few minutes for the build to finish and refresh your repo.
-6. On the right-hand side, in the Environments section, click on 'Github-pages'.
+
+Deploying Website to GitHub Pages and Pushing Changes to GitHub
+- 1: Set up GitHub Pages
+Select the project you want to deploy from your GitHub repository.
+
+- 2: Configure GitHub Pages Settings
+Click on the Settings tab on the left-hand side of the page, scroll down to the Code and Automation section, and click on Pages. Set up the Build and Deployment section by selecting "Deploy from Branch" and choosing the main branch (usually main or master) as the source for your deployment. Set the folder path to / (root) so that GitHub Pages looks for your index.html file in the root directory of your repository.
+
+- 3: Save Changes
+Save the changes you made in Step 2.
+
+- 4: Wait for Build Completion
+Go back to the Code tab and wait a few minutes for the build process to complete. You can monitor the build progress by looking at the activity log at the top of the page.
+
+- 5: Refresh Repository
+Refresh your repository by clicking on the refresh icon or pressing F5.
+
+- 6: Check GitHub Pages
+Head over to the Environments section on the right-hand side of the page and click on GitHub Pages. This will take you to your live website hosted on GitHub Pages!
+
+- 7: Push Changes to GitHub (using Command Line)
+Open your terminal or command prompt, navigate to the root directory of your project, and run:
+git branch to check you're in the correct branch
+git add . to add all changes
+git commit -m "Deployed website to GitHub Pages" to commit changes with a meaningful message
+git push origin main to push changes to the remote repository (GitHub)
+
+- 8 (Alternative): Push Changes to GitHub (using Git Client)
+Open your Git client, navigate to your local repository, and follow these steps:
+Check you're in the correct branch
+Commit all changes with a meaningful message
+Push changes to the remote repository (GitHub)
+
+That's it! Your website should now be deployed on GitHub Pages, and you've pushed your changes to GitHub.
 
 # Features
 ## Home Page
