@@ -83,7 +83,7 @@ The website consists of two pages. easy to navigate and smooth transition to go 
 
 
    #### Desktop 
- ![wireforme](assets/images/rules0.webp)
+ ![wireforme](assets/images/gamerules.webp)
  ![wireforme](assets/images/rules.webp)
   #### Game page
  ![wireforme](assets/images/frame.webp)
@@ -256,6 +256,14 @@ The website is tested across the below browsers to check the performance
 ![CSS](assets/images/css.validation.png)
 
 ## Javascript Validation
+- Errors and Warnings
+
+![java](assets/images/java.Validation.png)
+- Errors and Warnings fixed
+
+![java](assets/images/java.Validationfix.png)
+
+
 
 
 ## Lighthouse Test
