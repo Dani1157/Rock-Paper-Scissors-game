@@ -1,18 +1,24 @@
+// Define an array of choices
 var choices = ["rock", "paper", "scissors"];
-var playersDisplay = document.getElementById("playersDisplay");
-var botDisplay = document.getElementById("botDisplay");
-var resultDisplay = document.getElementById("resultDisplay");
-var playerScoreDisplay = document.getElementById("playerScoreDisplay");
-var botScoreDisplay = document.getElementById("botScoreDisplay");
 
+// Get references to the HTML elements we'll be using
+var playersDisplay = document.getElementById("playersDisplay"); // display the player's choice
+var botDisplay = document.getElementById("botDisplay"); // display the bot's choice
+var resultDisplay = document.getElementById("resultDisplay"); // display the result of the game
+var playerScoreDisplay = document.getElementById("playerScoreDisplay"); // display the player's score
+var botScoreDisplay = document.getElementById("botScoreDisplay"); // display the bot's score
+
+// Initialize the scores to 0
 var playerScore = 0;
 var botScore = 0;
 
+// Define the game function
 function mygame(playersChoice) {
+  // Get a random choice for the bot
   var botChoice = choices[Math.floor(Math.random() * 3)];
 
+  // Determine the result of the game based on the player's and bot's choices
   var result = "";
-
   if (playersChoice === botChoice) {
     result = "IT'S A TIE";
   } else {
@@ -29,10 +35,12 @@ function mygame(playersChoice) {
     }
   }
 
+  // Update the HTML elements to show the results of the game
   playersDisplay.textContent = 'The Player chose: ' + playersChoice;
   botDisplay.textContent = 'The Bot chose: ' + botChoice;
   resultDisplay.textContent = result;
 
+  // Update the scores based on the result of the game
   switch (result) {
     case "YOU WIN":
       resultDisplay.textContent = "YOU WIN";
@@ -53,12 +61,12 @@ function mygame(playersChoice) {
   }
 }
 
-// Get the buttons
+// Get references to the buttons
 var rockButton = document.getElementById("rockButton");
 var paperButton = document.getElementById("paperButton");
 var scissorsButton = document.getElementById("scissorsButton");
 
-// Add an event listener to each button
+// Add event listeners to each button to call the game function when clicked
 rockButton.addEventListener("click", function() {
   mygame("rock");
 });
