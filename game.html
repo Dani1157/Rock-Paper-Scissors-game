@@ -1,77 +1,46 @@
 <!-- Document Type Definition (DOCTYPE) for HTML5 -->
 <!DOCTYPE html>
-<!-- HTML document, language set to English -->
 <html lang="en">
-<!-- Head section of the HTML document -->
 <head>
-    <!-- Character encoding set to UTF-8 -->
     <meta charset="UTF-8">
-    <!-- Viewport settings for initial scale and width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta description for search engine results -->
     <meta name="description" content="Play Rock Paper Scissors online!">
-    <!-- Link to external CSS file (style.css) -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Link to external CSS file (font-awesome) from a CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Title of the HTML document -->
     <title>Rock, Paper, Scissors Game</title>
 </head>
-<!-- Body section of the HTML document -->
 <body>
-    <!-- Main container div -->
     <div class="container">
-        <!-- Header title -->
         <h1>Rock, Paper, Scissors ;D</h1>
-        <!-- Choices div containing buttons for rock, paper, and scissors -->
         <div class="Choices">
-            <!-- Button for rock choice with icon -->
-            <button onclick="mygame('rock')">Rock 🪨</button>
-            <!-- Button for paper choice with icon -->
-            <button onclick="mygame('paper')">Paper 🗞️</button>
-            <!-- Button for scissors choice with icon -->
-            <button onclick="mygame('scissor')">Scissors ✂️</button>
+            <button id="rockButton">Rock 🪨</button>
+            <button id="paperButton">Paper 🗞️</button>
+            <button id="scissorsButton">Scissors ✂️</button>
         </div>
-        <!-- Divs for displaying player and bot choices -->
         <div id="playersDisplay">Player</div>
         <div id="botDisplay">Bot</div>
-        <!-- Div for displaying result -->
         <div id="resultDisplay">Result</div>
-        <!-- Divs for displaying player and bot scores -->
         <div class="scoreDisplay">
             <span id="playerScoreDisplay">Player Score: 0</span>
         </div>
         <div class="scoreDisplay">
             <span id="botScoreDisplay">Bot Score: 0</span>
         </div>
-        <!-- Options div containing links to quit or restart the game -->
         <div class="options">
             <a href="index.html" title="Click me">Quit</a>
             <button id="reset-btn" onclick="window.location.reload()">Restart</button>
         </div>
-        <!-- Link to external JavaScript file (game.js) -->
-        <script src="assets/game.js/game.js"></script>
+        <script src="assets/game.js"></script> <!-- Corrected path to JavaScript -->
     </div>
-    <!-- Footer section of the HTML document -->
     <footer>
-        <!-- Social links section -->
         <div class="social">
-            <!-- Instagram link with icon and title attribute set to "instagram" -->
             <a href="https://www.instagram.com/naenae_nene_6545?igsh=NHF6MHZwajlqZWYw" title="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            
-            <!-- Twitter link with icon and title attribute set to "x" -->
             <a href="https://x.com/daniel34241510?s=09" title="x" target="_blank"><i class="fab fa-twitter"></i></a>
-            
-            <!-- YouTube link with icon and title attribute set to "youtube" -->
             <a href="https://youtube.com/@user-ss6sw3lx8y?si=Ql9l90zxOFIzH_mw" title="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
-            
-            <!-- GitHub link with icon and title attribute set to "github" -->
             <a href="https://github.com/Dani1157" title="github" target="_blank"><i class="fab fa-github-alt"></i></a>
         </div>
-        <!-- Footer bottom section -->
         <div class="footerbottom">
-            <!-- Designed by Dani Text Content with Designer's Name as a Span element inside the text content -->
-            <p>Designed by<span class="designer">Dani</span></p>
+            <p>Designed by <span class="designer">Dani</span></p>
         </div>
     </footer>
 </body>
