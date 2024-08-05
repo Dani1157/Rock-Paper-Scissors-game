@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Brief description for SEO and browsers -->
     <meta name="description" content="Play Rock Paper Scissors online!">
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Title of the web page which appears in the browser tab -->
     <title>Rock, Paper, Scissors Game</title>
 </head>
 <body>
+    <!-- Main container for the game interface -->
     <div class="container">
+        <!-- Main title of the game -->
         <h1>Rock, Paper, Scissors ;D</h1>
+        <!-- Buttons for player choices -->
         <div class="Choices">
+            <!-- Button for the "Rock" option -->
             <button id="rockButton">Rock 🪨</button>
+            <!-- Button for the "Paper" option -->
             <button id="paperButton">Paper 🗞️</button>
+            <!-- Button for the "Scissors" option -->
             <button id="scissorsButton">Scissors ✂️</button>
         </div>
+        <!-- Display area for player, bot, and result -->
         <div id="playersDisplay">Player</div>
         <div id="botDisplay">Bot</div>
         <div id="resultDisplay">Result</div>
+        <!-- Score display for player and bot -->
         <div class="scoreDisplay">
+            <!-- Player score display -->
             <span id="playerScoreDisplay">Player Score: 0</span>
         </div>
         <div class="scoreDisplay">
+            <!-- Bot score display -->
             <span id="botScoreDisplay">Bot Score: 0</span>
         </div>
+        <!-- Options for quitting or restarting the game -->
         <div class="options">
+            <!-- Link to quit the game and go back to the home page -->
             <a href="index.html" title="Click me">Quit</a>
+            <!-- Button to restart the game by reloading the page -->
             <button id="reset-btn" onclick="window.location.reload()">Restart</button>
         </div>
     </div>
+    <!-- Link to the external JavaScript file for game logic -->
     <script src="assets/game.js/game.js"></script>
 </body>
 </html>

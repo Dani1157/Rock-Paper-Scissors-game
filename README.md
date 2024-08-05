@@ -318,8 +318,48 @@ languages used:
 - CSS3(styling of the page)
 - Javascript (Functionalities)
 
+---
 
+### Issues Identified and Fixes Applied
 
+1. **Incorrect JavaScript File Path**
+   - **Issue**: The path to the JavaScript file (`game.js`) in the script tag was specified incorrectly (`assets/game.js`). This would prevent the script from loading properly.
+   - **Fix**: Changed the script path to `assets/game.js/game.js`, ensuring that the file is correctly referenced and can be loaded by the HTML document.
+
+   ```html
+   <script src="assets/game.js/game.js"></script>
+   ```
+
+2. **DOM Not Ready for Event Listeners**
+   - **Issue**: Event listeners for the game buttons were attached without ensuring the DOM was fully loaded. This could lead to `null` references if the script was executed before the button elements were available.
+   - **Fix**: Wrapped the code that attaches event listeners in a `DOMContentLoaded` event to ensure that it only runs after the entire DOM structure is available.
+
+   ```javascript
+   document.addEventListener('DOMContentLoaded', function() {
+       Object.keys(buttons).forEach(function(buttonId) {
+           var choice = buttons[buttonId];
+           document.getElementById(buttonId).addEventListener("click", function() {
+               handleButtonClick(choice);
+           });
+       });
+   });
+   ```
+
+3. **General Code Structure and Readability**
+   - **Issue**: Initial code organization was functional but could benefit from improved readability and maintainability. Grouping related functionalities separately enhances clarity.
+   - **Fix**: Organized the code into clearer sections, including comments that describe the purpose of each function and the relevant variables. This makes it easier to understand and maintain.
+
+4. **Consistency in Display Updates**
+   - **Issue**: Logic for updating the display was correct but lacked comments to explain what each section does. This could lead to confusion when debugging or enhancing features.
+   - **Fix**: Added detailed comments throughout the code, explaining the logic in updating the displays for player choices, bot choices, results, and score updates.
+
+---
+
+### Summary of Changes
+- Updated the JavaScript file path to ensure proper script loading.
+- Implemented a `DOMContentLoaded` event to safely attach event listeners for interactivity.
+- Improved code structure and readability by organizing sections and adding comments.
+- Ensured consistency in how the display is updated to enhance clarity and maintainability.
 
 ## Acknowledgements
 i would like to thank eveyone who helped me do this project
