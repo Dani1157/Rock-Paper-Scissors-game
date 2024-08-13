@@ -14,6 +14,12 @@ var botScore = 0;
 
 // Function to play the game, taking player's choice as a parameter
 function mygame(playersChoice) {
+    // Check if the player's choice is valid
+    if (!choices.includes(playersChoice)) {
+        console.error("Invalid choice: " + playersChoice);
+        return; // Exit the function if the choice is invalid
+    }
+
     // Select a random choice for the bot from the available choices
     var botChoice = choices[Math.floor(Math.random() * choices.length)];
     var result = "";
@@ -71,5 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to handle button clicks
 function handleButtonClick(choice) {
+    console.log("Button clicked with choice:", choice); // Log the choice for debugging
     mygame(choice); // Call the game function with the user's choice
 }
