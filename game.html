@@ -1,55 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding for the document -->
     <meta charset="UTF-8">
-    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Brief description for SEO and browsers -->
-    <meta name="description" content="Play Rock Paper Scissors online!">
-    <!-- Link to external CSS file for styling -->
+    <meta name="description" content="Next-gen Rock Paper Scissors with animations and effects">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Link to Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Title of the web page which appears in the browser tab -->
-    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>RPS NEO | 2025</title>
 </head>
 <body>
-    <!-- Main container for the game interface -->
-    <div class="container">
-        <!-- Main title of the game -->
-        <h1>Rock, Paper, Scissors ;D</h1>
-        <!-- Buttons for player choices -->
-        <div class="Choices">
-            <!-- Button for the "Rock" option -->
-            <button id="rockButton">Rock 🪨</button>
-            <!-- Button for the "Paper" option -->
-            <button id="paperButton">Paper 🗞️</button>
-            <!-- Button for the "Scissors" option -->
-            <button id="scissorsButton">Scissors ✂️</button>
+    <div class="cyber-background">
+        <div class="gradient-orb"></div>
+        <div class="gradient-orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="game-container">
+        <!-- Navigation -->
+        <nav class="game-nav">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Arcade</a>
+            <div class="game-title">
+                <span class="neon-small">RPS</span>
+                <span class="game-version">NEO</span>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn" id="soundToggle"><i class="fas fa-volume-up"></i></button>
+                <button class="nav-btn" id="settingsBtn"><i class="fas fa-cog"></i></button>
+            </div>
+        </nav>
+
+        <!-- Main Game Area -->
+        <div class="rps-game-area">
+            <!-- VS Header with Animations -->
+            <div class="vs-header">
+                <div class="player-tag">
+                    <i class="fas fa-user-astronaut"></i>
+                    <span>PLAYER 1</span>
+                </div>
+                <div class="vs-divider">
+                    <span class="vs-text">VS</span>
+                    <div class="vs-glow"></div>
+                </div>
+                <div class="bot-tag">
+                    <i class="fas fa-robot"></i>
+                    <span>NEO·BOT</span>
+                </div>
+            </div>
+
+            <!-- Choice Display Arena -->
+            <div class="choice-arena">
+                <div class="choice-card player-choice-card" id="playerChoiceDisplay">
+                    <div class="choice-placeholder">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="choice-label">Your Choice</div>
+                </div>
+                <div class="choice-card bot-choice-card" id="botChoiceDisplay">
+                    <div class="choice-placeholder">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="choice-label">Bot Choice</div>
+                </div>
+            </div>
+
+            <!-- Result Display with Animation -->
+            <div class="result-container">
+                <div class="result-glow" id="resultGlow"></div>
+                <div class="result-text" id="resultDisplay">READY</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="game-btn rock" id="rockButton">
+                    <i class="fas fa-hand-fist"></i>
+                    <span>ROCK</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <button class="game-btn paper" id="paperButton">
+                    <i class="fas fa-hand-peace"></i>
+                    <span>PAPER</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <button class="game-btn scissors" id="scissorsButton">
+                    <i class="fas fa-hand-scissors"></i>
+                    <span>SCISSORS</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+
+            <!-- Scoreboard -->
+            <div class="scoreboard">
+                <div class="score-item player-score">
+                    <div class="score-header">
+                        <i class="fas fa-user"></i>
+                        <span>PLAYER</span>
+                    </div>
+                    <div class="score-value" id="playerScoreDisplay">0</div>
+                    <div class="score-bar">
+                        <div class="score-fill" id="playerScoreFill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="score-item bot-score">
+                    <div class="score-header">
+                        <i class="fas fa-robot"></i>
+                        <span>BOT</span>
+                    </div>
+                    <div class="score-value" id="botScoreDisplay">0</div>
+                    <div class="score-bar">
+                        <div class="score-fill" id="botScoreFill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Power-Up Section -->
+            <div class="power-ups">
+                <div class="power-up" id="doublePoints">
+                    <i class="fas fa-star"></i>
+                    <span class="power-tooltip">Double Points (Ready)</span>
+                </div>
+                <div class="power-up" id="shield">
+                    <i class="fas fa-shield-halved"></i>
+                    <span class="power-tooltip">Shield (Prevent loss)</span>
+                </div>
+                <div class="power-up" id="hint">
+                    <i class="fas fa-eye"></i>
+                    <span class="power-tooltip">Hint (See bot's move)</span>
+                </div>
+            </div>
+
+            <!-- Game Controls -->
+            <div class="game-controls">
+                <button class="control-btn" id="resetGame">
+                    <i class="fas fa-rotate-right"></i>
+                    <span>New Game</span>
+                </button>
+                <button class="control-btn" id="tournamentMode">
+                    <i class="fas fa-trophy"></i>
+                    <span>Tournament</span>
+                </button>
+            </div>
         </div>
-        <!-- Display area for player, bot, and result -->
-        <div id="playersDisplay">Player</div>
-        <div id="botDisplay">Bot</div>
-        <div id="resultDisplay">Result</div>
-        <!-- Score display for player and bot -->
-        <div class="scoreDisplay">
-            <!-- Player score display -->
-            <span id="playerScoreDisplay">Player Score: 0</span>
-        </div>
-        <div class="scoreDisplay">
-            <!-- Bot score display -->
-            <span id="botScoreDisplay">Bot Score: 0</span>
-        </div>
-        <!-- Options for quitting or restarting the game -->
-        <div class="options">
-            <!-- Link to quit the game and go back to the home page -->
-            <a href="index.html" title="Click me">Quit</a>
-            <!-- Button to restart the game by reloading the page -->
-            <button id="reset-btn" onclick="window.location.reload()">Restart</button>
+
+        <!-- Tournament Modal -->
+        <div class="modal" id="tournamentModal">
+            <div class="modal-content">
+                <h2><i class="fas fa-crown"></i> Tournament Mode</h2>
+                <div class="tournament-bracket">
+                    <div class="bracket-round">
+                        <div class="bracket-match">You vs Bot 1</div>
+                        <div class="bracket-match">Bot 2 vs Bot 3</div>
+                    </div>
+                    <div class="bracket-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="bracket-final">Finals</div>
+                </div>
+                <button class="modal-close" onclick="closeModal()">Start Tournament</button>
+            </div>
         </div>
     </div>
-    <!-- Link to the external JavaScript file for game logic -->
-    <script src="assets/game.js/game.js"></script>
+
+    <script src="assets/js/game.js"></script>
 </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your memory with neon patterns and brain-training challenges">
+    <title>Memory Matrix | 2025</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+      
+</head>
+<body>
+    <div class="cyber-background">
+        <div class="gradient-orb"></div>
+        <div class="gradient-orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="game-container">
+        <!-- Navigation -->
+        <nav class="game-nav">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Arcade</a>
+            <div class="game-title">
+                <span class="neon-small">MEMORY</span>
+                <span class="game-version">MATRIX</span>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn" id="soundToggle"><i class="fas fa-volume-up"></i></button>
+                <button class="nav-btn" id="settingsBtn"><i class="fas fa-cog"></i></button>
+            </div>
+        </nav>
+
+        <!-- Main Game Area -->
+        <div class="memory-game-area">
+            <!-- Stats Dashboard -->
+            <div class="memory-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-value" id="score">0</div>
+                    <div class="stat-label">Score</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="stat-value" id="moves">0</div>
+                    <div class="stat-label">Moves</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="stat-value" id="time">0:00</div>
+                    <div class="stat-label">Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="stat-value" id="bestStreak">0</div>
+                    <div class="stat-label">Best Streak</div>
+                </div>
+            </div>
+
+            <!-- Difficulty Selector -->
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="easy">EASY</button>
+                <button class="difficulty-btn" data-difficulty="medium">MEDIUM</button>
+                <button class="difficulty-btn" data-difficulty="hard">HARD</button>
+                <button class="difficulty-btn" data-difficulty="expert">EXPERT</button>
+            </div>
+
+            <!-- Timer (shows only for hard/expert) -->
+            <div class="timer-container" id="timerContainer" style="display: none;">
+                <div class="timer-ring" id="timerRing"></div>
+                <div class="timer-number" id="timerNumber">60</div>
+            </div>
+
+            <!-- Game Board -->
+            <div class="memory-board" id="memoryBoard"></div>
+
+            <!-- Combo Meter -->
+            <div class="combo-meter">
+                <div class="combo-fill" id="comboFill"></div>
+            </div>
+            <div class="combo-text" id="comboText">Combo: 0x</div>
+
+            <!-- Game Controls -->
+            <div class="memory-controls">
+                <button class="memory-btn" id="newGameBtn">
+                    <i class="fas fa-play"></i>
+                    New Game
+                </button>
+                <button class="memory-btn" id="hintBtn">
+                    <i class="fas fa-lightbulb"></i>
+                    Hint (3)
+                </button>
+                <button class="memory-btn" id="shuffleBtn">
+                    <i class="fas fa-random"></i>
+                    Shuffle
+                </button>
+            </div>
+
+            <!-- Achievement Popup (hidden by default) -->
+            <div class="achievement-popup" id="achievementPopup">
+                <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>Achievement Unlocked!</h3>
+                    <p id="achievementMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/memory.js"></script>
+</body>
+</html>
